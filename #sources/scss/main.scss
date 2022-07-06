@@ -78,6 +78,9 @@ a {
 }
 .header__user-company {
 	@extend %tpl_flex;
+	.button.dropdown {
+		margin-right: 15px;
+	}
 }
 .header__icon-profile {
 	display: block;
@@ -85,8 +88,13 @@ a {
 	height: 40px;
 	overflow: hidden;
 	border-radius: 40px;
-	
+	flex-shrink: 0;
 	margin-right: 15px;
+
+	a {
+		display: block;
+		height: 100%;
+	}
 }
 .button {
 	& > a {
@@ -96,9 +104,13 @@ a {
 		font-family: 'Lato';
 		font-style: normal;
 		font-weight: 700;
+		line-height: 0.9rem;
 		color: #222222;
 		border: 1px solid #5E6366;
 		border-radius: 5px;
+		@media (max-width: 767px) {
+			padding: 4px 8px;
+		}
 	}
 	&.dropdown {
 		a {			
@@ -163,6 +175,80 @@ a {
 		}
 	}
 }
+
+.drop-down-profile.dropdown-menu {
+	padding: 0;
+	max-width: 280px;
+	.drop-down-profile__heading {
+		@extend %tpl_flex;
+		background-color: #3E4345;
+		color: #fff;
+		padding: 14px 18px;
+
+		.drop-down-profile__name {
+			margin-bottom: 0;
+			font-weight: 700;
+		}
+
+
+		a:hover .drop-down-profile__icon,
+		a:focus .drop-down-profile__icon,
+		a.active .drop-down-profile__icon {
+			opacity: 0.5;
+		}
+	}
+
+
+
+	.nav__submenu li {
+		margin-bottom: 8px;
+		line-height: 18px;
+	}
+}
+
+.drop-down-profile__list {
+	padding: 12px 18px;
+	margin-bottom: 0;
+	li {
+		margin-bottom: 4px;
+		a {
+			@extend %tpl_flex;
+			color: #222;
+			@extend %tpl_hover-link;
+
+			.nav__text {
+				font-weight: 500;
+			}
+
+			i {
+				justify-content: center;
+				width: 10px;
+				height: 10px;
+				transition: transform 0.35s ease;
+				transform-origin: 0.3em 70%;
+			}
+
+			&.btn-toggle[aria-expanded="true"] i {
+				transform: rotate(90deg);
+			}
+		}
+	}
+}
+
+.header__mobile-menu {
+	display: none;
+	.hamburger {
+		padding: 15px 20px 15px 0px;
+		.hamburger-box {
+			width: 30px;
+			overflow: hidden;
+		}
+	}
+	@media (max-width: 767px) {
+		display: block;
+	}
+}
+
 .header__notification {
 	@extend %tpl_flex;
 	& > div {
@@ -174,6 +260,9 @@ a {
 }
 .header__date {
 	font-weight: 700;
+	@media (max-width: 767px) {
+		display: none;
+	}
 }
 .new-message {
 	position: absolute;
@@ -204,9 +293,17 @@ a {
 	background: #FFFFFF;
 	box-shadow: 1px 0px 4px rgba(0, 0, 0, 0.2);
 	padding-top: 35px;
-
+	transition-duration: 0.3s;
 	&.padding-top {
 		padding-top: 90px;
+	}
+
+	@media (max-width: 991px) {
+		width: 202px;
+	}
+
+	@media (max-width: 767px) {
+		display: none;
 	}
 }
 .navbar__wrapper {
@@ -235,9 +332,7 @@ a {
 					@extend %tpl_flex;
 					justify-content: center;
 					width: 10px;
-					height: 10px;
-					
-					
+					height: 10px;					
 					transition: transform .35s ease;
 					transform-origin: 0.5em 50%;				
 				}
@@ -265,6 +360,13 @@ a {
 	font-size: 16px;
 	line-height: 20px;
 	flex: 1 1 auto;
+
+	@media (max-width: 991px) {
+		font-weight: 700;
+		font-size: 14px;
+		line-height: 14px;
+		flex: 1 1 auto;
+	}
 }
 
 .nav__submenu {
@@ -289,6 +391,14 @@ a {
 	height: 100vh;
 	min-height: 100vh;
 	margin-left: 290px;
+
+	@media (max-width: 991px) {
+		margin-left: 202px;
+	}
+
+	@media (max-width: 767px) {
+		margin-left: 0px;
+	}
 }
 
 .main-page__row {

@@ -8,20 +8,66 @@
     <title>Deep house</title>
     <link rel="stylesheet" href="vendors/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/hamburgers.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
     <header class="header">
         <div class="header__row">
+            <div class="header__mobile-menu">
+                <a href="#menu">
+                    <button class="hamburger hamburger--collapse" type="button">
+                        <div class="hamburger-box">
+                          <div class="hamburger-inner"></div>
+                        </div>
+                    </button>
+                </a>
+            </div>
             <div class="header__user-company">
                 <div class="header__icon-profile">
-                    <a href="/">
+                    <a href="/" id="dropdownProfile" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
                         <img src="images/55963572_329903657878924_8118882464673300480_n 1.jpg" alt="user-name">
                     </a>
+                    <div class="drop-down-profile dropdown-menu">
+                        <div class="drop-down-profile__heading">
+                            <div class="header__icon-profile">
+                                <img src="images/55963572_329903657878924_8118882464673300480_n 1.jpg" alt="user-name">
+                            </div>
+                            <p class="drop-down-profile__name">Черенков Алексей Андреевич</p>
+                            <a href="/"><span class="drop-down-profile__icon"><img src="images/icon-exit-dropdown.svg" alt=""></span></a>
+                        </div>
+                        <ul aria-labelledby="dropdownProfile" class="drop-down-profile__list">
+                            <li class="nav__item">
+                                <a class="nav__link" href="/">
+                                    <span class="nav__icon"><img src="images/icon-profile.svg" alt=""></span>
+                                    <span class="nav__text">Профиль</span>
+                                </a>
+                            </li>
+                            <li class="nav__item">
+                                <a class="nav__link btn-toggle" href="/" data-bs-toggle="collapse" data-bs-target="#profile-submenu" aria-expanded="false">
+                                    <span class="nav__icon"><img src="images/icon-company.svg" alt=""></span>
+                                    <span class="nav__text">Компании</span>
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                                <div class="collapse" id="profile-submenu" style="">
+                                    <ul class="btn-toggle-nav nav__submenu">
+                                        <li><a href="#" class="link-dark rounded">Мои компании</a></li>
+                                        <li><a href="#" class="link-dark rounded">Добавить</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav__item">
+                                <a class="nav__link" href="/">
+                                    <span class="nav__icon"><img src="images/icon-exit.svg" alt=""></span>
+                                    <span class="nav__text">Выход</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="button dropdown">
-                    <a href="/" href="/" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a href="/" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                         ИП Черенков Алексей Андреевич<i class="fa fa-angle-right"></i>
                     </a>
                     <ul aria-labelledby="dropdownMenuButton1" class="dropdown-menu">
@@ -44,7 +90,7 @@
             </div>
         </div>
     </header>
-    <nav class="navbar">
+    <nav class="navbar padding-top">
         <div class="navbar__wrapper">
             <ul class="nav">
                 <li class="nav__item">
