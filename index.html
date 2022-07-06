@@ -16,13 +16,11 @@
     <header class="header">
         <div class="header__row">
             <div class="header__mobile-menu">
-                <a href="#menu">
-                    <button class="hamburger hamburger--collapse" type="button">
-                        <div class="hamburger-box">
-                          <div class="hamburger-inner"></div>
-                        </div>
-                    </button>
-                </a>
+                <button class="hamburger hamburger--collapse" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <div class="hamburger-box">
+                        <div class="hamburger-inner"></div>
+                    </div>
+                </button>
             </div>
             <div class="header__user-company">
                 <div class="header__icon-profile">
@@ -88,8 +86,19 @@
                     <a href="/"><img src="images/icon-bell.svg" alt="оповещения"><span class="new-message"><img src="images/icon-active.svg" alt=""></span></a>
                 </div>
             </div>
+
+            <!--mobile menu-->
+            <div class="collapse" id="navbarToggleExternalContent">
+                <div class="bg-dark p-4">
+                    <h5 class="text-white h4">Collapsed content</h5>
+                    <span class="text-muted">Toggleable via the navbar brand.</span>
+                </div>
+            </div>
         </div>
     </header>
+
+    
+
     <nav class="navbar padding-top">
         <div class="navbar__wrapper">
             <ul class="nav">

@@ -220,6 +220,8 @@ a {
 .drop-down-profile.dropdown-menu {
   padding: 0;
   max-width: 280px;
+  overflow: hidden;
+  border-radius: 5px;
 }
 .drop-down-profile.dropdown-menu .drop-down-profile__heading {
   background-color: #3E4345;
