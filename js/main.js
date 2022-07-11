@@ -18,27 +18,10 @@ window.addEventListener('scroll', function () {
 
 let hamburger = document.querySelector('.hamburger');
 
-// function addActiveBlutton(button) {
-//     for (let i = 0; i < button.length; i++) {
-//         button[i].classList.add('is-active');
-//     }
-// };
-
-// function removeActiveBlutton(button) {
-//     for (let i = 0; i < button.length; i++) {
-//         button[i].classList.remove('is-active');
-//     }
-// };
-
-// container.onclick = function() {
-//     container.classList.toggle("container_color_red");
-// }
-
-function addActiveBlutton(button) {
-    button.classList.toggle("is-active");
-    for (let i = 0; i < button.length; i++) {
-        button[i].classList.remove('is-active');
+hamburger.addEventListener('click', function() {
+    if (hamburger.classList.contains('is-active')) {
+        hamburger.classList.remove('is-active');
+    } else {
+        hamburger.classList.add('is-active');
     }
-};
-
-hamburger.addEventListener('click', addActiveBlutton);
+})

@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Профиль пользователя</title>
+    <link rel="stylesheet" href="vendors/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/hamburgers.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__row">
+            <div class="header__mobile-button">
+                <button class="hamburger hamburger--collapse" type="button" data-bs-toggle="collapse" data-bs-target="#mobile-menu" aria-controls="mobile-menu" aria-expanded="false">
+                    <div class="hamburger-box">
+                        <div class="hamburger-inner"></div>
+                    </div>
+                </button>
+            </div>
+            <div class="header__user-company">
+                <div class="header__icon-profile">
+                    <a href="/" id="dropdownProfile" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                        <img src="images/55963572_329903657878924_8118882464673300480_n 1.jpg" alt="user-name">
+                    </a>
+                    <div class="drop-down-profile dropdown-menu">
+                        <div class="drop-down-profile__heading">
+                            <div class="header__icon-profile">
+                                <img src="images/55963572_329903657878924_8118882464673300480_n 1.jpg" alt="user-name">
+                            </div>
+                            <p class="drop-down-profile__name">Черенков Алексей Андреевич</p>
+                            <a href="/"><span class="drop-down-profile__icon"><img src="images/icon-exit-dropdown.svg" alt=""></span></a>
+                        </div>
+                        <ul aria-labelledby="dropdownProfile" class="drop-down-profile__list">
+                            <li class="nav__item">
+                                <a class="nav__link" href="/">
+                                    <span class="nav__icon"><img src="images/icon-profile.svg" alt=""></span>
+                                    <span class="nav__text">Профиль</span>
+                                </a>
+                            </li>
+                            <li class="nav__item">
+                                <a class="nav__link btn-toggle" href="/" data-bs-toggle="collapse" data-bs-target="#profile-submenu" aria-expanded="false">
+                                    <span class="nav__icon"><img src="images/icon-company.svg" alt=""></span>
+                                    <span class="nav__text">Компании</span>
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                                <div class="collapse" id="profile-submenu">
+                                    <ul class="btn-toggle-nav nav__submenu">
+                                        <li><a href="#" class="link-dark rounded">Мои компании</a></li>
+                                        <li><a href="#" class="link-dark rounded">Добавить</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav__item">
+                                <a class="nav__link" href="/">
+                                    <span class="nav__icon"><img src="images/icon-exit.svg" alt=""></span>
+                                    <span class="nav__text">Выход</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="button dropdown d-none d-sm-block">
+                    <a href="/" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        ИП Черенков Алексей Андреевич<i class="fa fa-angle-right"></i>
+                    </a>
+                    <ul aria-labelledby="dropdownMenuButton1" class="dropdown-menu">
+                        <li><a class="active" href="/">ИП Черенков Алексей Андреевич</a></li>
+                        <li><a href="/">ОАО “Газпромнефть”</a></li>
+                        <li><a href="/">Добавить</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="header__notification">
+                <div class="header__date">
+                    25 июня, суббота 21:30
+                </div>
+                <div class="header__mail">
+                    <a href="/"><img src="images/icon-mail.svg" alt="сообщения"><span class="new-message"><img src="images/icon-active.svg" alt=""></span></a>
+                </div>
+                <div class="header__bell">
+                    <a href="/"><img src="images/icon-bell.svg" alt="оповещения"><span class="new-message"><img src="images/icon-active.svg" alt=""></span></a>
+                </div>
+            </div>
+        </div>
+        
+    </header>
+
+    <nav class="navbar padding-top">
+        <div class="navbar__wrapper">
+            <ul class="nav">
+                <li class="nav__item">
+                    <a class="nav__link" href="/">
+                        <span class="nav__icon"><img src="images/icons-order.svg" alt=""></span>
+                        <span class="nav__text">Мои заказы</span>
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="/">
+                        <span class="nav__icon"><img src="images/icon-docs.svg" alt=""></span>
+                        <span class="nav__text">Мои документы</span>
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link active" href="/">
+                        <span class="nav__icon"><img src="images/icon-profile.svg" alt=""></span>
+                        <span class="nav__text">Профиль</span>
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link btn-toggle" href="/" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="false">
+                        <span class="nav__icon"><img src="images/icon-services.svg" alt=""></span>
+                        <span class="nav__text">Сервисы</span>
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                    <div class="collapse" id="home-collapse">
+                        <ul class="btn-toggle-nav nav__submenu">
+                            <li><a href="#" class="link-dark rounded">Заказ доставки до дома</a></li>
+                            <li><a href="#" class="link-dark rounded">Заказ универсального сервиса</a></li>
+                            <li><a href="#" class="link-dark rounded">Заявка на мебель</a></li>
+                            <li><a href="#" class="link-dark rounded">Заявка на выдачу документов из бухгалтерии</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="/">
+                        <span class="nav__icon"><img src="images/icon-ad.svg" alt=""></span>
+                        <span class="nav__text">Объявления</span>
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="/">
+                        <span class="nav__icon"><img src="images/icon-special.svg" alt=""></span>
+                        <span class="nav__text">Полезное</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!--mobile menu-->
+    <div class="mobile-menu">
+        <div class="collapse" id="mobile-menu">
+            <div class="p-4">
+                <div class="navbar__wrapper">
+                    <ul class="nav">
+                        <li class="nav__item">
+                            <a class="nav__link" href="/">
+                                <span class="nav__icon"><img src="images/icons-order.svg" alt=""></span>
+                                <span class="nav__text">Мои заказы</span>
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link" href="/">
+                                <span class="nav__icon"><img src="images/icon-docs.svg" alt=""></span>
+                                <span class="nav__text">Мои документы</span>
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link active" href="/">
+                                <span class="nav__icon"><img src="images/icon-profile.svg" alt=""></span>
+                                <span class="nav__text">Профиль</span>
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link btn-toggle" href="/" data-bs-toggle="collapse" data-bs-target="#profile-submenu-company" aria-expanded="false">
+                                <span class="nav__icon"><img src="images/icon-company.svg" alt=""></span>
+                                <span class="nav__text">ИП Черенков Алексей Андреевич</span>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                            <div class="collapse" id="profile-submenu-company">
+                                <ul class="btn-toggle-nav nav__submenu">
+                                    <li><a href="#" class="link-dark rounded">ОАО “Газпромнефть</a></li>
+                                    <li><a href="#" class="link-dark rounded">Добавить</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link btn-toggle" href="/" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="false">
+                                <span class="nav__icon"><img src="images/icon-services.svg" alt=""></span>
+                                <span class="nav__text">Сервисы</span>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                            <div class="collapse" id="home-collapse">
+                                <ul class="btn-toggle-nav nav__submenu">
+                                    <li><a href="#" class="link-dark rounded">Заказ доставки до дома</a></li>
+                                    <li><a href="#" class="link-dark rounded">Заказ универсального сервиса</a></li>
+                                    <li><a href="#" class="link-dark rounded">Заявка на мебель</a></li>
+                                    <li><a href="#" class="link-dark rounded">Заявка на выдачу документов из бухгалтерии</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link" href="/">
+                                <span class="nav__icon"><img src="images/icon-ad.svg" alt=""></span>
+                                <span class="nav__text">Объявления</span>
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link" href="/">
+                                <span class="nav__icon"><img src="images/icon-special.svg" alt=""></span>
+                                <span class="nav__text">Полезное</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-page">
+        <div class="main-page__row page">
+            <!--heading page-->
+            <div class="page__header">
+                <div class="page__block">
+                    <div class="page__title">
+                        <h3 class="title-block title-block_header">Мой профиль</h3>
+                    </div>
+                    <div class="page__breadcrumbs">
+                        <ul class="breadcrumbs-dashboard">
+                            <li class="breadcrumbs-dashboard__item"><a href="/">Главная</a></li>
+                            <li class="breadcrumbs-dashboard__item">Мой профиль</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--profile wrapper-->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="page__profile profile">
+                        <ul class="nav nav-tabs">
+                            <li class="nav-item" role="presentation">
+                              <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Мой профиль</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                              <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Мои компании</button>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+                                <div class="profile__user-name">
+                                    Черенков Алексей Андреевич
+                                </div>
+                                <div class="profile__form">
+                                    <form class="form-db" action="">
+                                        <div class="row align-item-center">
+                                            <div class="form-db__col col-auto">
+                                                <label for="date-of-brith" class="form-db__label col-form-label">Дата рождения</label>
+                                            </div>
+                                            <div class="form-db__col col" data-fill="1">
+                                                <input value="05.05.1955" type="text" tabindex="1" name="date-of-brith" id="date-of-brith" class="form-control" >
+                                            </div>
+                                        </div>
+                                        <div class="row align-item-center">
+                                            <div class="form-db__col col-auto">
+                                                <label for="phone-user" class="form-db__label col-form-label">Рабочий телефон</label>
+                                            </div>
+                                            <div class="form-db__col col">
+                                                <input type="text" tabindex="2" name="phone-user" id="phone-user" class="form-control">
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+                                <div class="profile__company">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="table__header">
+                                                <h5>Мои компании</h5>
+                                            </div>
+                                            <div class="table__body">
+                                                <div class="table-responsive">
+                                                    <table class="table">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>№</th>
+                                                                <th>Название компании</th>
+                                                                <th>Удалить</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>1</td>
+                                                                <td>
+                                                                    <a class="nav__link btn-toggle" href="/" data-bs-toggle="collapse" data-bs-target="#collapse-company-1" aria-expanded="false">
+                                                                        ИП Черенков Алексей Андреевич
+                                                                    </a>
+                                                                </td>
+                                                                <td><a href="/"><img src="images/icon-close.svg" alt="удалить"></a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="collapse" id="collapse-company-1" colspan="3">
+                                                                    <!--collapse Company_1-->
+                                                                    <div>
+                                                                        <div class="profile__user-name">
+                                                                            ИП Черенков Алексей Андреевич
+                                                                        </div>
+                                                                        <div class="profile__form">
+                                                                            <form class="form-db" action="">
+                                                                                <div class="row">
+                                                                                    <div class="col-xl-5">
+                                                                                        <div class="row align-item-center">
+                                                                                            <div class="form-db__col col-auto">
+                                                                                                <label for="name-company" class="form-db__label col-form-label">Название</label>
+                                                                                            </div>
+                                                                                            <div class="form-db__col col" data-fill="1">
+                                                                                                <input value="ИП Черенков Алексей Андреевич" type="text" tabindex="1" id="name-company" class="form-control" name="name-company">
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="row align-item-center">
+                                                                                            <div class="form-db__col col-auto">
+                                                                                                <label for="inn" class="form-db__label col-form-label">ИНН</label>
+                                                                                            </div>
+                                                                                            <div class="form-db__col col">
+                                                                                                <input type="text" tabindex="2" id="inn" class="form-control" name="inn">
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="row align-item-center">
+                                                                                            <div class="form-db__col col-auto">
+                                                                                                <label for="contact-face" class="form-db__label col-form-label">Контактное лицо</label>
+                                                                                            </div>
+                                                                                            <div class="form-db__col col">
+                                                                                                <input type="text" tabindex="3" id="contact-face" class="form-control" name="contact-face">
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="col-xl-7">
+                                                                                        <div class="row align-item-center">
+                                                                                            <div class="form-db__col col-auto">
+                                                                                                <label for="comments" class="form-db__label col-form-label">Комментарии</label>
+                                                                                            </div>
+                                                                                            <div class="form-db__col col" data-fill="1">
+                                                                                                <textarea class="form-control" tabindex="4" name="comments" id="comments" rows="6">Теперь я расскажу о том, как я родился, как я рос и как обнаружились во мне первые признаки гения. То, что другим дается с трудом, мне дается с легкостью! 
+                                                                                                </textarea>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </form>
+                                                                        </div>
+                                                                        <div class="profile__managers">
+                                                                            <div class="row">
+                                                                                <div class="col-md-12">
+                                                                                    <div class="table__header">
+                                                                                        <h5>Менеджеры</h5>
+                                                                                    </div>
+                                                                                    <div class="table__body">
+                                                                                        <div class="table-responsive">
+                                                                                            <table class="table">
+                                                                                                <thead>
+                                                                                                    <tr>
+                                                                                                        <th>№</th>
+                                                                                                        <th>ФИО</th>
+                                                                                                        <th>Удалить</th>
+                                                                                                    </tr>
+                                                                                                </thead>
+                                                                                                <tbody>
+                                                                                                    <tr>
+                                                                                                        <td>1</td>
+                                                                                                        <td>Черенков Алексей Андреевич</td>
+                                                                                                        <td><a href="/"><img src="images/icon-close.svg" alt="удалить"></a></td>
+                                                                                                    </tr>
+                                                                                                    <tr>
+                                                                                                        <td>2</td>
+                                                                                                        <td>Черенков Алексей Андреевич</td>
+                                                                                                        <td><a href="/"><img src="images/icon-close.svg" alt="удалить"></a></td>
+                                                                                                    </tr>                                                            
+                                                                                                </tbody>
+                                                                                            </table>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="row">
+                                                                                <div class="col-md-12">
+                                                                                    <form class="form-db" action="">
+                                                                                        <div class="row align-item-center">
+                                                                                            <div class="form-db__col col-auto">
+                                                                                                <label for="call-manager" class="form-db__label col-form-label">Пригласить</label>
+                                                                                            </div>
+                                                                                            <div class="form-db__col col">
+                                                                                                <input type="text" tabindex="1" name="call-manager" id="call-manager" class="form-control">
+                                                                                            </div>
+                                                                                            <div class="form-db__col col">
+                                                                                                <button type="submit" class="btn btn-primary mb-3">Отправить</button>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </form>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="profile__filiation">
+                                                                            <div class="row">
+                                                                                <div class="col-md-12">
+                                                                                    <div class="table__header">
+                                                                                        <h5>Филиалы</h5>
+                                                                                    </div>
+                                                                                    <div class="table__body">
+                                                                                        <div class="table-responsive">
+                                                                                            <table class="table">
+                                                                                                <thead>
+                                                                                                    <tr>
+                                                                                                        <th>№</th>
+                                                                                                        <th>Название</th>
+                                                                                                        <th>Удалить</th>
+                                                                                                    </tr>
+                                                                                                </thead>
+                                                                                                <tbody>
+                                                                                                    <tr>
+                                                                                                        <td>1</td>
+                                                                                                        <td>Филиал</td>
+                                                                                                        <td><a href="/"><img src="images/icon-close.svg" alt="удалить"></a></td>
+                                                                                                    </tr>
+                                                                                                    <tr>
+                                                                                                        <td>2</td>
+                                                                                                        <td>Филиал</td>
+                                                                                                        <td><a href="/"><img src="images/icon-close.svg" alt="удалить"></a></td>
+                                                                                                    </tr>                                                            
+                                                                                                </tbody>
+                                                                                            </table>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="row">
+                                                                                <div class="col-md-12">
+                                                                                    <a href="/" class="btn btn-primary mb-3">Добавить филиал</a>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="profile__add-filiation">
+                                                                            <form class="form-db" action="">
+                                                                                <div class="row">
+                                                                                    <div class="col-xl-5">
+                                                                                        <div class="row align-item-center">
+                                                                                            <div class="form-db__col col-auto">
+                                                                                                <label for="name-company" class="form-db__label col-form-label">Название</label>
+                                                                                            </div>
+                                                                                            <div class="form-db__col col">
+                                                                                                <input type="text" tabindex="1" id="name-company" class="form-control" name="name-company">
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="row align-item-center">
+                                                                                            <div class="form-db__col col-auto">
+                                                                                                <label for="adres" class="form-db__label col-form-label">Адрес</label>
+                                                                                            </div>
+                                                                                            <div class="form-db__col col">
+                                                                                                <input type="text" tabindex="2" id="adres" class="form-control" name="adres">
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="row align-item-center">
+                                                                                            <div class="form-db__col col-auto">
+                                                                                                <label for="phone" class="form-db__label col-form-label">Телефон</label>
+                                                                                            </div>
+                                                                                            <div class="form-db__col col">
+                                                                                                <input type="text" tabindex="3" id="phone" class="form-control" name="phone">
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="row align-item-center">
+                                                                                            <div class="form-db__col col-auto">
+                                                                                                <label for="time-work" class="form-db__label col-form-label">Время работы</label>
+                                                                                            </div>
+                                                                                            <div class="form-db__col col">
+                                                                                                <input type="text" tabindex="4" id="time-work" class="form-control" name="time-work">
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="row align-item-center">
+                                                                                            <div class="form-db__col col-auto">
+                                                                                                <label for="adres-site" class="form-db__label col-form-label">Адрес сайта</label>
+                                                                                            </div>
+                                                                                            <div class="form-db__col col">
+                                                                                                <input type="text" tabindex="4" id="adres-site" class="form-control" name="adres-site">
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="row align-item-center">
+                                                                                            <div class="form-db__col col-auto">
+                                                                                                <label for="e-mail" class="form-db__label col-form-label">E-mail</label>
+                                                                                            </div>
+                                                                                            <div class="form-db__col col">
+                                                                                                <input type="text" tabindex="5" id="e-mail" class="form-control" name="e-mail">
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="col-xl-7">
+                                                                                        <div class="row align-item-center">
+                                                                                            <div class="form-db__col col-auto">
+                                                                                                <label for="comments" class="form-db__label col-form-label">Комментарии</label>
+                                                                                            </div>
+                                                                                            <div class="form-db__col col">
+                                                                                                <textarea class="form-control" tabindex="6" name="comments" id="comments" rows="6"></textarea>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </form>
+                                                                        </div>
+                                                                        <div class="profile__photo photo">
+                                                                            <div class="row">
+                                                                                <div class="col-md-12">
+                                                                                    <div class="table__header">
+                                                                                        <h5>Фотографии</h5>
+                                                                                    </div>
+                                                                                    <div class="photo__row">
+                                                                                        <div class="photo__item">
+                                                                                            <span class="photo__del"><a href="/"><img src="images/icon-close.svg" alt="удалить"></a></span>
+                                                                                            <img src="images/1-inter.jpg" alt="photo">
+                                                                                        </div>
+                                                                                        <div class="photo__item">
+                                                                                            <span class="photo__del"><a href="/"><img src="images/icon-close.svg" alt="удалить"></a></span>
+                                                                                            <img src="images/1-inter.jpg" alt="photo">
+                                                                                        </div>
+                                                                                        <div class="photo__item">
+                                                                                            <span class="photo__del"><a href="/"><img src="images/icon-close.svg" alt="удалить"></a></span>
+                                                                                            <img src="images/1-inter.jpg" alt="photo">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="row">
+                                                                                <div class="col-md-12">
+                                                                                    <form class="form-db" action="">
+                                                                                        <div class="row align-item-center">
+                                                                                            <div class="form-db__col col">
+                                                                                                <input type="file" tabindex="1" name="photo1" class="form-control">
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </form>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="profile__map">
+                                                                            <div class="row">
+                                                                                <div class="col-md-12">
+                                                                                    <div class="table__header">
+                                                                                        <h5>Карта</h5>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <form class="form-db" action="">
+                                                                                <div class="row">
+                                                                                    <div class="col-xl-5">
+                                                                                        <div class="row align-item-center">
+                                                                                            <div class="form-db__col col-auto">
+                                                                                                <label for="coordinates" class="form-db__label col-form-label">Координаты</label>
+                                                                                            </div>
+                                                                                            <div class="form-db__col col">
+                                                                                                <input type="text" tabindex="1" id="coordinates" class="form-control" name="coordinates">
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                    <div class="col-xs-12">
+                                                                                        <button type="submit" class="btn btn-primary btn-lg mb-3">Сохранить</button>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </form>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2</td>
+                                                                <td>
+                                                                    <a class="nav__link btn-toggle" href="/" data-bs-toggle="collapse" data-bs-target="#collapse-company-2" aria-expanded="false">
+                                                                        ООО "Газпромнефть"
+                                                                    </a>
+                                                                </td>
+                                                                <td><a href="/"><img src="images/icon-close.svg" alt="удалить"></a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="collapse" id="collapse-company-2" colspan="3">
+                                                                    <!--collapse Company_2-->
+                                                                    <div>
+                                                                        <div class="profile__user-name">
+                                                                            ООО "Газпромнефть"
+                                                                        </div>
+                                                                        <div class="profile__form">
+                                                                            <form class="form-db" action="">
+                                                                                <div class="row">
+                                                                                    <div class="col-xl-5">
+                                                                                        <div class="row align-item-center">
+                                                                                            <div class="form-db__col col-auto">
+                                                                                                <label for="name-company" class="form-db__label col-form-label">Название</label>
+                                                                                            </div>
+                                                                                            <div class="form-db__col col">
+                                                                                                <input type="text" tabindex="1" id="name-company" class="form-control" name="name-company">
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="row align-item-center">
+                                                                                            <div class="form-db__col col-auto">
+                                                                                                <label for="inn" class="form-db__label col-form-label">ИНН</label>
+                                                                                            </div>
+                                                                                            <div class="form-db__col col">
+                                                                                                <input type="text" tabindex="2" id="inn" class="form-control" name="inn">
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="row align-item-center">
+                                                                                            <div class="form-db__col col-auto">
+                                                                                                <label for="contact-face" class="form-db__label col-form-label">Контактное лицо</label>
+                                                                                            </div>
+                                                                                            <div class="form-db__col col">
+                                                                                                <input type="text" tabindex="3" id="contact-face" class="form-control" name="contact-face">
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="col-xl-7">
+                                                                                        <div class="row align-item-center">
+                                                                                            <div class="form-db__col col-auto">
+                                                                                                <label for="comments" class="form-db__label col-form-label">Комментарии</label>
+                                                                                            </div>
+                                                                                            <div class="form-db__col col">
+                                                                                                <textarea class="form-control" tabindex="4" name="comments" id="comments" rows="6"></textarea>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </form>
+                                                                        </div>
+                                                                        <div class="profile__managers">
+                                                                            <div class="row">
+                                                                                <div class="col-md-12">
+                                                                                    <div class="table__header">
+                                                                                        <h5>Менеджеры</h5>
+                                                                                    </div>
+                                                                                    <div class="table__body">
+                                                                                        <div class="table-responsive">
+                                                                                            <table class="table">
+                                                                                                <thead>
+                                                                                                    <tr>
+                                                                                                        <th>№</th>
+                                                                                                        <th>ФИО</th>
+                                                                                                        <th>Удалить</th>
+                                                                                                    </tr>
+                                                                                                </thead>
+                                                                                                <tbody>
+                                                                                                    <tr>
+                                                                                                        <td>1</td>
+                                                                                                        <td>Черенков Алексей Андреевич</td>
+                                                                                                        <td><a href="/"><img src="images/icon-close.svg" alt="удалить"></a></td>
+                                                                                                    </tr>
+                                                                                                    <tr>
+                                                                                                        <td>2</td>
+                                                                                                        <td>Черенков Алексей Андреевич</td>
+                                                                                                        <td><a href="/"><img src="images/icon-close.svg" alt="удалить"></a></td>
+                                                                                                    </tr>                                                            
+                                                                                                </tbody>
+                                                                                            </table>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="row">
+                                                                                <div class="col-md-12">
+                                                                                    <form class="form-db" action="">
+                                                                                        <div class="row align-item-center">
+                                                                                            <div class="form-db__col col-auto">
+                                                                                                <label for="call-manager" class="form-db__label col-form-label">Пригласить</label>
+                                                                                            </div>
+                                                                                            <div class="form-db__col col">
+                                                                                                <input type="text" tabindex="1" name="call-manager" id="call-manager" class="form-control">
+                                                                                            </div>
+                                                                                            <div class="form-db__col col">
+                                                                                                <button type="submit" class="btn btn-primary mb-3">Отправить</button>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </form>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="profile__filiation">
+                                                                            <div class="row">
+                                                                                <div class="col-md-12">
+                                                                                    <div class="table__header">
+                                                                                        <h5>Филиалы</h5>
+                                                                                    </div>
+                                                                                    <div class="table__body">
+                                                                                        <div class="table-responsive">
+                                                                                            <table class="table">
+                                                                                                <thead>
+                                                                                                    <tr>
+                                                                                                        <th>№</th>
+                                                                                                        <th>Название</th>
+                                                                                                        <th>Удалить</th>
+                                                                                                    </tr>
+                                                                                                </thead>
+                                                                                                <tbody>
+                                                                                                    <tr>
+                                                                                                        <td>1</td>
+                                                                                                        <td>Филиал</td>
+                                                                                                        <td><a href="/"><img src="images/icon-close.svg" alt="удалить"></a></td>
+                                                                                                    </tr>
+                                                                                                    <tr>
+                                                                                                        <td>2</td>
+                                                                                                        <td>Филиал</td>
+                                                                                                        <td><a href="/"><img src="images/icon-close.svg" alt="удалить"></a></td>
+                                                                                                    </tr>                                                            
+                                                                                                </tbody>
+                                                                                            </table>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="row">
+                                                                                <div class="col-md-12">
+                                                                                    <a href="/" class="btn btn-primary mb-3">Добавить филиал</a>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="profile__add-filiation">
+                                                                            <form class="form-db" action="">
+                                                                                <div class="row">
+                                                                                    <div class="col-xl-5">
+                                                                                        <div class="row align-item-center">
+                                                                                            <div class="form-db__col col-auto">
+                                                                                                <label for="name-company" class="form-db__label col-form-label">Название</label>
+                                                                                            </div>
+                                                                                            <div class="form-db__col col">
+                                                                                                <input type="text" tabindex="1" id="name-company" class="form-control" name="name-company">
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="row align-item-center">
+                                                                                            <div class="form-db__col col-auto">
+                                                                                                <label for="adres" class="form-db__label col-form-label">Адрес</label>
+                                                                                            </div>
+                                                                                            <div class="form-db__col col">
+                                                                                                <input type="text" tabindex="2" id="adres" class="form-control" name="adres">
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="row align-item-center">
+                                                                                            <div class="form-db__col col-auto">
+                                                                                                <label for="phone" class="form-db__label col-form-label">Телефон</label>
+                                                                                            </div>
+                                                                                            <div class="form-db__col col">
+                                                                                                <input type="text" tabindex="3" id="phone" class="form-control" name="phone">
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="row align-item-center">
+                                                                                            <div class="form-db__col col-auto">
+                                                                                                <label for="time-work" class="form-db__label col-form-label">Время работы</label>
+                                                                                            </div>
+                                                                                            <div class="form-db__col col">
+                                                                                                <input type="text" tabindex="4" id="time-work" class="form-control" name="time-work">
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="row align-item-center">
+                                                                                            <div class="form-db__col col-auto">
+                                                                                                <label for="adres-site" class="form-db__label col-form-label">Адрес сайта</label>
+                                                                                            </div>
+                                                                                            <div class="form-db__col col">
+                                                                                                <input type="text" tabindex="4" id="adres-site" class="form-control" name="adres-site">
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="row align-item-center">
+                                                                                            <div class="form-db__col col-auto">
+                                                                                                <label for="e-mail" class="form-db__label col-form-label">E-mail</label>
+                                                                                            </div>
+                                                                                            <div class="form-db__col col">
+                                                                                                <input type="text" tabindex="5" id="e-mail" class="form-control" name="e-mail">
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="col-xl-7">
+                                                                                        <div class="row align-item-center">
+                                                                                            <div class="form-db__col col-auto">
+                                                                                                <label for="comments" class="form-db__label col-form-label">Комментарии</label>
+                                                                                            </div>
+                                                                                            <div class="form-db__col col">
+                                                                                                <textarea class="form-control" tabindex="6" name="comments" id="comments" rows="6"></textarea>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </form>
+                                                                        </div>
+                                                                        <div class="profile__photo photo">
+                                                                            <div class="row">
+                                                                                <div class="col-md-12">
+                                                                                    <div class="table__header">
+                                                                                        <h5>Фотографии</h5>
+                                                                                    </div>
+                                                                                    <div class="photo__row">
+                                                                                        <div class="photo__item">
+                                                                                            <span class="photo__del"><a href="/"><img src="images/icon-close.svg" alt="удалить"></a></span>
+                                                                                            <img src="images/1-inter.jpg" alt="photo">
+                                                                                        </div>
+                                                                                        <div class="photo__item">
+                                                                                            <span class="photo__del"><a href="/"><img src="images/icon-close.svg" alt="удалить"></a></span>
+                                                                                            <img src="images/1-inter.jpg" alt="photo">
+                                                                                        </div>
+                                                                                        <div class="photo__item">
+                                                                                            <span class="photo__del"><a href="/"><img src="images/icon-close.svg" alt="удалить"></a></span>
+                                                                                            <img src="images/1-inter.jpg" alt="photo">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="row">
+                                                                                <div class="col-md-12">
+                                                                                    <form class="form-db" action="">
+                                                                                        <div class="row align-item-center">
+                                                                                            <div class="form-db__col col">
+                                                                                                <input type="file" tabindex="1" name="photo1" class="form-control">
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </form>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="profile__map">
+                                                                            <div class="row">
+                                                                                <div class="col-md-12">
+                                                                                    <div class="table__header">
+                                                                                        <h5>Карта</h5>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <form class="form-db" action="">
+                                                                                <div class="row">
+                                                                                    <div class="col-xl-5">
+                                                                                        <div class="row align-item-center">
+                                                                                            <div class="form-db__col col-auto">
+                                                                                                <label for="coordinates" class="form-db__label col-form-label">Координаты</label>
+                                                                                            </div>
+                                                                                            <div class="form-db__col col">
+                                                                                                <input type="text" tabindex="1" id="coordinates" class="form-control" name="coordinates">
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                    <div class="col-xs-12">
+                                                                                        <button type="submit" class="btn btn-primary btn-lg mb-3">Сохранить</button>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </form>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>                                                          
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <form class="form-db" action="">
+                                                <div class="row align-item-center">
+                                                    <div class="form-db__col col">
+                                                        <button type="submit" class="btn btn-primary mb-3">Добавить</button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -506,7 +506,7 @@ a {
 .table__header {
 	h5 {
 		font-weight: 700;
-		font-size: 16px;
+		font-size: 20px;
 		line-height: 16px;
 		margin-bottom: 30px;
 	}
@@ -530,4 +530,122 @@ a {
 
 .table>:not(:first-child) {
     border-top: 1px solid currentColor;
+}
+
+.page__profile {
+	@extend %tpl_page__block;
+	input, textarea {
+		height: 36px;
+		background: #F6F7FB;
+		border: 1px solid #D5D9DF;
+		border-radius: 5px;
+		padding-right: 26px;
+	}
+	textarea {
+		height: auto;
+		width: 100%;
+	}
+}
+
+.form-db__col.col {
+	position: relative;
+}
+
+.form-db__col.col[data-fill="1"]::after {
+    content: " ";
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: url(../images/icon-ok_green.svg);
+    position: absolute;
+    top: 9px;
+    right: 18px;
+    z-index: 100;
+}
+
+.profile {
+	.nav-tabs {
+		margin-bottom: 32px;
+		.nav-link {
+			font-weight: 700;
+			font-size: 16px;
+			line-height: 28px;
+			border: none;
+			padding-left: 0px;
+			padding-right: 0px;
+			margin-right: 32px;
+			@extend %tpl_hover-link;
+			color: #222;
+			&.active {
+				color:#222;
+				border-bottom: 4px solid #0D6EFD;
+			}
+		}
+	}
+}
+
+.profile__user-name {
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 20px;
+	margin-bottom: 32px;
+}
+
+.form-db__label {
+	font-size: 16px;
+	line-height: 20px;
+	color: rgba(34, 34, 34, 0.5);
+	padding-left: 21px;
+
+	@media (max-width: 1999px) {
+		padding-left: 0;
+	}
+}
+
+.form-db__col {
+	margin-bottom: 16px;
+    min-width: 174px;
+    max-width: 420px;
+}
+
+
+.profile__managers,
+.profile__filiation,
+.profile__photo,
+.profile__map {
+	margin-top: 30px;
+}
+
+.photo__row {
+	@extend %tpl_flex;
+	flex-wrap: wrap;
+}
+.photo__item {
+	position: relative;
+	width: 104px;
+	height: 74px;
+	background: #F6F7FB;
+	border: 1px solid #D5D9DF;
+	border-radius: 5px;
+	overflow: hidden;
+	margin: 0 20px 30px 0;
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
+	}
+}
+.photo__del {
+	position: absolute;
+    top: 3px;
+    right: 3px;
+    width: 16px;
+    height: 16px;
+    border: 2px solid white;
+    border-radius: 8px;
+}
+
+td.collapse.show {
+	border-top: 5px solid white;
 }
