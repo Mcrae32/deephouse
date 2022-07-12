@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deep house</title>
+    <link rel="stylesheet" href="vendors/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/hamburgers.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/headerstyle.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__row">
+            <!-- <div class="header__mobile-button">
+                <button class="hamburger hamburger--collapse" type="button" data-bs-toggle="collapse" data-bs-target="#mobile-menu" aria-controls="mobile-menu" aria-expanded="false">
+                    <div class="hamburger-box">
+                        <div class="hamburger-inner"></div>
+                    </div>
+                </button>
+            </div> -->
+            <div class="header__user-company">
+                <div class="header__icon-profile">
+                    <a href="/" id="dropdownProfile" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                        <img src="images/header__avatar.jpg" alt="user-name">
+                    </a>
+                    <div class="drop-down-profile dropdown-menu">
+                        <div class="drop-down-profile__heading">
+                            <div class="header__icon-profile">
+                                <img src="images/55963572_329903657878924_8118882464673300480_n 1.jpg" alt="user-name">
+                            </div>
+                            <p class="drop-down-profile__name">Черенков Алексей Андреевич</p>
+                            <a href="/"><span class="drop-down-profile__icon"><img src="images/icon-exit-dropdown.svg" alt=""></span></a>
+                        </div>
+                        <ul aria-labelledby="dropdownProfile" class="drop-down-profile__list">
+                            <li class="nav__item">
+                                <a class="nav__link" href="/">
+                                    <span class="nav__icon"><img src="images/icon-profile.svg" alt=""></span>
+                                    <span class="nav__text">Профиль</span>
+                                </a>
+                            </li>
+                            <li class="nav__item">
+                                <a class="nav__link btn-toggle" href="/" data-bs-toggle="collapse" data-bs-target="#profile-submenu" aria-expanded="false">
+                                    <span class="nav__icon"><img src="images/icon-company.svg" alt=""></span>
+                                    <span class="nav__text">Компании</span>
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                                <div class="collapse" id="profile-submenu">
+                                    <ul class="btn-toggle-nav nav__submenu">
+                                        <li><a href="#" class="link-dark rounded">Мои компании</a></li>
+                                        <li><a href="#" class="link-dark rounded">Добавить</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav__item">
+                                <a class="nav__link" href="/">
+                                    <span class="nav__icon"><img src="images/icon-exit.svg" alt=""></span>
+                                    <span class="nav__text">Выход</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- <div class="button dropdown d-none d-sm-block">
+                    <a href="/" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        ИП Черенков Алексей Андреевич<i class="fa fa-angle-right"></i>
+                    </a>
+                    <ul aria-labelledby="dropdownMenuButton1" class="dropdown-menu">
+                        <li><a class="active" href="/">ИП Черенков Алексей Андреевич</a></li>
+                        <li><a href="/">ОАО “Газпромнефть”</a></li>
+                        <li><a href="/">Добавить</a></li>
+                    </ul>
+                </div> -->
+            </div>
+            <div class="header__notification">
+                <div class="header__date">
+                    25 июня, суббота 21:30
+                </div>
+                <!-- <div class="header__mail">
+                    <a href="/"><img src="images/icon-mail.svg" alt="сообщения"><span class="new-message"><img src="images/icon-active.svg" alt=""></span></a>
+                </div>
+                <div class="header__bell">
+                    <a href="/"><img src="images/icon-bell.svg" alt="оповещения"><span class="new-message"><img src="images/icon-active.svg" alt=""></span></a>
+                </div> -->
+            </div>
+        </div>
+        
+    </header>
+    
+    <!--nav hide-->
+    
+    <!--mobile menu hide-->
+    
+    <div class="main-page main-page_autorization">
+        <div class="main-page__row page">
+            
+            <!--heading page-->
+            <div class="page__header">
+                <div class="page__block">
+                    <div class="page__title">
+                        <h3 class="title-block title-block_header">Партнёрский кабинет</h3>
+                    </div>
+                    <div class="page__breadcrumbs">
+                        <ul class="breadcrumbs-dashboard">
+                            <li class="breadcrumbs-dashboard__item"><a href="/">Главная</a></li>
+                            <li class="breadcrumbs-dashboard__item">Партнёрский кабинет</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!--profile wrapper-->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="page__profile profile">
+                        <div class="profile__form">
+                            <form class="form-db" action="">
+                                <div class="row align-item-center">
+                                    <div class="form-db__col col-auto">
+                                        <label for="e-mail" class="form-db__label col-form-label">E-mail</label>
+                                    </div>
+                                    <div class="form-db__col col" data-fill="1">
+                                        <input value="mcrae32@mail.ru" type="email" tabindex="1" name="e-mail" id="e-mail" class="form-control" >
+                                    </div>
+                                </div>
+                                <div class="row align-item-center">
+                                    <div class="form-db__col col-auto">
+                                        <label for="password" class="form-db__label col-form-label">Пароль</label>
+                                    </div>
+                                    <div class="form-db__col col">
+                                        <input type="password" tabindex="2" name="password" id="password" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="row align-item-center">
+                                    <div class="form-db__col col">
+                                        <a href="/">Сменить пароль</a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <button type="submit" class="btn btn-primary mb-3">Авторизоваться</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+        </div>
+    </div>
+    <script src="vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

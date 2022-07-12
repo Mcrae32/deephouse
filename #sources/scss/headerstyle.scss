@@ -1,0 +1,252 @@
+//tpl
+%tpl_flex {
+	display: flex;
+    align-items: center;
+}
+
+%tpl_hover-link {
+	&:hover,
+	&:focus,
+	&:active,
+	&.active {
+		color: #0666EB;
+	}
+}
+
+%tpl_page__block {
+	background: #FFFFFF;
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+	border-radius: 5px;
+	padding: 18px 22px;
+	margin-bottom: 30px;
+}
+
+//header
+.header {
+	@extend %tpl_flex;
+	position: relative;
+    z-index: 100;
+	height: 56px;
+	background: #FFB90C;
+	box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.25);
+}
+
+.header__row {
+	@extend %tpl_flex;
+    padding: 0 25px;
+    justify-content: space-between;
+    flex: 1 1 auto;
+}
+.header__user-company {
+	@extend %tpl_flex;
+	.button.dropdown {
+		margin-right: 15px;
+	}
+}
+.header__icon-profile {
+	display: block;
+	width: 40px;
+	height: 40px;
+	overflow: hidden;
+	border-radius: 40px;
+	flex-shrink: 0;
+	margin-right: 15px;
+	a {
+		display: block;
+		height: 100%;
+	}
+}
+.button {
+	& > a {
+		@extend %tpl_flex;
+		justify-content: center;
+		padding: 7px 16px;
+		font-family: 'Lato';
+		font-style: normal;
+		font-weight: 700;
+		line-height: 0.9rem;
+		color: #222222;
+		border: 1px solid #5E6366;
+		border-radius: 5px;
+		@media (max-width: 767px) {
+			padding: 4px 8px;
+		}
+	}
+	&.dropdown {
+		a {			
+			i {
+				font-size: 20px;
+				margin-left: 16px;
+				font-weight: 600;
+			}	
+		}
+
+		ul.dropdown-menu.show {
+			background: #FFFFFF;
+			border: 1px solid #D9D9D9;
+			border-radius: 5px;
+			padding: 12px 18px 19px;
+			// text-align: center;
+			li {
+				margin-bottom: 12px;
+				&:last-child {
+					margin-bottom: 0;
+				}
+
+				a {
+					color: #222;
+					&:hover,
+					&:focus,
+					&:active {
+						color: #0666EB;
+					}
+
+					&.active {
+						@extend %tpl_flex;
+						font-weight: 600;
+						justify-content: space-between;
+						
+					}
+					&.active:hover,
+					&.active:focus,
+					&.active:active {
+						color: #222;
+						cursor: default;
+					}
+					&.active::after {
+						display: block;
+						content: '';
+						width: 14px;
+						height: 11px;
+						background: url(../images/icon-ok.svg);
+						background-position: center;
+						margin-left: 10px;
+					}
+				}
+			}
+		}
+	}
+
+	&.dropdown > a {
+		&:hover,
+		&:focus,
+		&:active {
+			background-color: #ffcc35;
+		}
+	}
+}
+
+.mobile-menu {
+	background-color: #fff;
+	box-shadow: 0px 1px 3px rgb(0 0 0 / 25%);
+
+	.navbar__wrapper {
+		max-width: 300px;
+	}
+}
+
+.drop-down-profile.dropdown-menu {
+	padding: 0;
+	max-width: 280px;
+	overflow: hidden;
+    border-radius: 5px;
+	
+	.drop-down-profile__heading {
+		@extend %tpl_flex;
+		background-color: #3E4345;
+		color: #fff;
+		padding: 14px 18px;
+
+		.drop-down-profile__name {
+			margin-bottom: 0;
+			font-weight: 700;
+		}
+
+
+		a:hover .drop-down-profile__icon,
+		a:focus .drop-down-profile__icon,
+		a.active .drop-down-profile__icon {
+			opacity: 0.5;
+		}
+	}
+
+
+
+	.nav__submenu li {
+		margin-bottom: 8px;
+		line-height: 18px;
+	}
+}
+
+.drop-down-profile__list {
+	padding: 12px 18px;
+	margin-bottom: 0;
+	li {
+		margin-bottom: 4px;
+		a {
+			@extend %tpl_flex;
+			color: #222;
+			@extend %tpl_hover-link;
+
+			.nav__text {
+				font-weight: 500;
+			}
+
+			i {
+				justify-content: center;
+				width: 10px;
+				height: 10px;
+				transition: transform 0.35s ease;
+				transform-origin: 0.3em 70%;
+			}
+
+			&.btn-toggle[aria-expanded="true"] i {
+				transform: rotate(90deg);
+			}
+		}
+	}
+}
+
+.header__mobile-button {
+	display: none;
+	.hamburger {
+		padding: 15px 20px 15px 0px;
+		.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+			width: 30px;
+		}
+	}
+	@media (max-width: 767px) {
+		display: block;
+	}
+}
+
+.header__notification {
+	@extend %tpl_flex;
+	& > div {
+		margin-right: 30px;
+	}
+	& > div:last-child {
+		margin-right: 0px;
+	}
+}
+.header__date {
+	font-weight: 700;
+	@media (max-width: 767px) {
+		display: none;
+	}
+}
+.new-message {
+	position: absolute;
+	top: -5px;
+	right: -5px;
+}
+.header__mail {
+	position:relative;
+}
+.header__bell {
+	position:relative;
+	.new-message {
+		top: -1px;
+		right: -2px;
+	}
+}
