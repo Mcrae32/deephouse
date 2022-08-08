@@ -190,7 +190,7 @@ h1, h2, h3, h4, h5, h6 {
 .nav__submenu li:last-child {
   margin-bottom: 0px;
 }
-.photo__row, .card__row, .page__breadcrumbs .breadcrumbs-dashboard, .navbar__wrapper .nav .nav__item, .navbar__wrapper .nav .nav__item .nav__link, .navbar__wrapper .nav .nav__item .nav__link.btn-toggle i {
+.order__info-title, .photo__row, .card__row, .page__breadcrumbs .breadcrumbs-dashboard, .navbar__wrapper .nav .nav__item, .navbar__wrapper .nav .nav__item .nav__link, .navbar__wrapper .nav .nav__item .nav__link.btn-toggle i {
   display: flex;
   align-items: center;
 }
@@ -204,6 +204,13 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
   padding: 18px 22px;
+  margin-bottom: 30px;
+}
+
+.profile__order h5, .table__header h5 {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 16px;
   margin-bottom: 30px;
 }
 
@@ -319,13 +326,6 @@ a {
 
 .card_green {
   background: linear-gradient(180deg, #62E1C3 0%, #4CDAB8 100%);
-}
-
-.table__header h5 {
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 16px;
-  margin-bottom: 30px;
 }
 
 .table thead tr th {
@@ -454,4 +454,71 @@ a {
 
 td.collapse.show {
   border-top: 5px solid white;
+}
+
+.profile__order h5 {
+  margin-bottom: 16px;
+}
+
+.order__title {
+  margin-bottom: 30px;
+}
+
+.order__date {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.order__info-title {
+  margin-bottom: 4px;
+  min-height: 30px;
+}
+
+.order__icon {
+  display: flex;
+  width: 30px;
+  height: 30px;
+  padding: 6px;
+  margin-right: 8px;
+  justify-content: center;
+  align-items: center;
+}
+
+.order__text {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.order__info-text {
+  margin-left: 40px;
+  margin-bottom: 16px;
+}
+.order__info-text p {
+  margin-bottom: 0;
+  line-height: 1.5rem;
+}
+
+.order__total {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.order__table td {
+  vertical-align: middle;
+}
+.order__table .order__product {
+  display: flex;
+  align-items: center;
+}
+
+.order__image {
+  object-fit: cover;
+  object-position: center;
+  margin-right: 16px;
+  width: 70px;
+  height: 50px;
+  border: 1px solid #D5D9DF;
+  border-radius: 5px;
 }
